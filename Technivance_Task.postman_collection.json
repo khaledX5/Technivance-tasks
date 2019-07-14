@@ -1,0 +1,222 @@
+{
+	"info": {
+		"_postman_id": "ac83443d-585b-e215-127e-ca047f266125",
+		"name": "Technivance_Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/api/cart/886/view",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "access_token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiI1YzE4ZTBhODU5OGQ1YWZiZTlmYmI5Nzl8dW5kZWZpbmVkIiwic3ViIjoic3ViamVjdCIsImF1ZCI6Im5vem9sIiwiZXhwIjoxNTQ1NzM5MDcwMDI5LCJuYmYiOjE1NDUxMzQyNzAwMjksImlhdCI6MTU0NTEzNDI3MDAyOSwianRpIjoiMjQ3NTVmZDAtMDJiYy0xMWU5LTk3MjktZWRhOGU2OGVmYTg3In0.nBUzROD3CLDY1Zsfds1tP4HTG2y970yiS9d0CYGHOMA"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/cart/view",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"cart",
+						"view"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/items",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/items",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"items"
+					]
+				},
+				"description": "list all items"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/cart/884",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/cart/{INSERT CART ID}/delete",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"cart",
+						"{INSERT CART ID}",
+						"delete"
+					]
+				},
+				"description": "Delete Item from a Cart"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/cart/885",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"quantity\":15\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/cart/{INSERT CART ID}/update",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"cart",
+						"{INSERT CART ID}",
+						"update"
+					]
+				},
+				"description": "update quantity "
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"address\":\"1 mahoud amin\",\n\t\"phone\":\"205623655store_credit\"\t\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/confirm/order",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"confirm",
+						"order"
+					]
+				},
+				"description": "add postman"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/cart/create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"user_id\":886,\n\t\"items\":[\n\t\t{\n\t\t\t\"item_id\":884,\n\t\t\t\"quantity\":1\n\t\t}\n\t\t\n\t]\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/cart/create",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"cart",
+						"create"
+					]
+				},
+				"description": "add to cart"
+			},
+			"response": []
+		}
+	]
+}
